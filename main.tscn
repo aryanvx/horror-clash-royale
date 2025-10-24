@@ -1,0 +1,129 @@
+[gd_scene load_steps=3 format=3 uid="uid://g80cf2b57xas"]
+
+[ext_resource type="Script" uid="uid://c1gm35irk2hgi" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="AudioStream" uid="uid://cj0wtbe64x3hn" path="res://fight.ogg" id="2_0xm2m"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ElixirLabel" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(25, 30)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -12.5
+offset_top = -30.0
+offset_right = 12.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayerHealthLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -61.0
+offset_right = 20.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="EnemyHealthLabel" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(25, 110)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 110.0
+grow_horizontal = 2
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(450, 150)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+
+[node name="SkeletonButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -99.0
+offset_bottom = 99.0
+grow_horizontal = 0
+text = "Skeleton (1)"
+
+[node name="GhostButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -99.0
+offset_top = 100.0
+offset_bottom = 199.0
+grow_horizontal = 0
+text = "Ghost (2)"
+
+[node name="ZombieButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -99.0
+offset_top = 200.0
+offset_bottom = 299.0
+grow_horizontal = 0
+text = "Zombie (3)"
+
+[node name="DemonButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -99.0
+offset_top = 300.0
+offset_bottom = 399.0
+grow_horizontal = 0
+text = "Demon (5)"
+
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -99.0
+offset_top = -99.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Restart"
+
+[node name="MuteButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 49.0
+grow_vertical = 0
+
+[node name="DoNotPressButton" type="Button" parent="CanvasLayer"]
+offset_right = 150.0
+offset_bottom = 150.0
+text = "DO NOT PRESS"
+autowrap_trim_flags = 0
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0xm2m")
+
+[connection signal="pressed" from="CanvasLayer/SkeletonButton" to="." method="_on_skeleton_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GhostButton" to="." method="_on_ghost_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ZombieButton" to="." method="_on_zombie_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/DemonButton" to="." method="_on_demon_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MuteButton" to="." method="_on_mute_button_pressed"]
