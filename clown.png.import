@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brdpjddwca4ht"
-valid=false
+uid="uid://5aoedwa66ttf"
+path="res://.godot/imported/clown.png-f7fed768e56809f6bd4d7ef47b043b47.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://clown.png"
+dest_files=["res://.godot/imported/clown.png-f7fed768e56809f6bd4d7ef47b043b47.ctex"]
 
 [params]
 

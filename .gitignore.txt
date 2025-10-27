@@ -1,0 +1,10 @@
+.import/
+.godot/
+export/
+*.exe
+*.zip
+*.tmp
+*.log
+*.DS_Store
+Thumbs.db
+*.stacktrace
